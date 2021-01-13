@@ -117,7 +117,7 @@
                     <thead>
                         <tr>
                             <th>Casename</th>
-                            <th><a href="[% exp.esgf_link %]" target="_blank">CMIP6 Experiment</a></th>
+                            <th>CMIP6 Experiment</th>
                             <th class="none">Title</th>
                             <th class="none">Data Set Availability</th>
                             <th class="none">Diagnostics Plot Sets</th>
@@ -132,7 +132,7 @@
                         [% matches = exp.esgf_link.match('source_id=([A-Za-z0-9-_]+)&experiment_id=([A-Za-z0-9-_]+)&variant_label=([A-Za-z0-9-_]+)') %]
                         <tr>
                             <td>[% exp.casename %]</td>
-                            <td>[% matches.0 %]_[% matches.1 %]_[% matches.2 %]</td>
+                            <td><a href="[% exp.esgf_link %]" target="_blank">[% matches.0 %]_[% matches.1 %]_[% matches.2 %]</a></td>
                             <td style="white-space:normal;">[% exp.title %]</td>
 
                             <!-- Dataset access -->

@@ -11,11 +11,11 @@
     [% INCLUDE 'um/css/css-include.html' %]
 
     <!-- datatables stylesheet includes -->
-    <link href="/includes/um/css/datatables.min.css" rel="stylesheet" />
+    <link href="/styles/um/css/datatables.min.css" rel="stylesheet" />
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-        <script src="/includes/um/js/html5shiv.js"></script>
+        <script src="/styles/um/js/html5shiv.js"></script>
     <![endif]-->
 </head>
 
@@ -33,9 +33,9 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="http://www.cesm.ucar.edu/models/">CESM Models</a></li>
-                            <li class="breadcrumb-item"><a href="http://www.cesm.ucar.edu/models/current.html">CESM Supported Releases</a></li>
-                            <li class="breadcrumb-item"><a href="http://www.cesm.ucar.edu/models/cesm2">CESM2</a></li>
+                            <li class="breadcrumb-item"><a href="https://www.cesm.ucar.edu/models/">CESM Models</a></li>
+                            <li class="breadcrumb-item"><a href="https://www.cesm.ucar.edu/models/current.html">CESM Supported Releases</a></li>
+                            <li class="breadcrumb-item"><a href="https://www.cesm.ucar.edu/models/cesm2">CESM2</a></li>
                             <li class="breadcrumb-item active">CESM2 Experiments, Data &amp; Diagnostic Output</li>
                         </ol>
                     </nav>
@@ -75,7 +75,7 @@
 
                         <p>Component sets and resolutions are backward compatible with all CESM releases. However, newer releases of CESM allow for additional compsets, resolutions and machines.</p>
 
-                        <p>The <a href="http://bb.cgd.ucar.edu">DiscussCESM Forums</a> bulletin board can also provide specific recommendations from the CESM community regarding which release of the model to use for your specific requirements.</p>
+                        <p>The <a href="https://bb.cgd.ucar.edu/cesm">DiscussCESM Forums</a> bulletin board can also provide specific recommendations from the CESM community regarding which release of the model to use for your specific requirements.</p>
                     </div>
                 </div>
             </div>
@@ -217,15 +217,15 @@
                                         </tr>
                                         <tr>
                                             <th id="details2">Component Set</th>
-                                            <td><a target="_blank" href="http://www.cesm.ucar.edu/models/cesm2/config/compsets.html">[% exp.compset %]</a></td>
+                                            <td><a target="_blank" href="https://www.cesm.ucar.edu/models/cesm2/config/compsets.html">[% exp.compset %]</a></td>
                                         </tr>
                                         <tr>
                                             <th id="details2">Grid Resolution</th>
-                                            <td><a target="_blank" href="http://www.cesm.ucar.edu/models/cesm2/config/grids.html">[% exp.grid %]</a></td>
+                                            <td><a target="_blank" href="https://www.cesm.ucar.edu/models/cesm2/config/grids.html">[% exp.grid %]</a></td>
                                         </tr>
                                         <tr>
                                             <th id="details2">Machine:compiler:mpilib</th>
-                                            <td><a target="_blank" href="http://www.cesm.ucar.edu/models/cesm2/config/machines.html">[% exp.machine %]:[% exp.compiler %]:[% exp.mpilib %]</a></td>
+                                            <td><a target="_blank" href="https://www.cesm.ucar.edu/models/cesm2/config/machines.html">[% exp.machine %]:[% exp.compiler %]:[% exp.mpilib %]</a></td>
                                             <tr>
                                                 <th id="details2">Last Update</th>
                                                 <td>[% exp.last_update %]</td>
@@ -233,7 +233,7 @@
                                             [% IF exp.expType_id == 1 %]
                                             <tr>
                                                 <th id="details2">CMIP6 Experiment</th>
-                                                <td><a target="_blank" href="http://clipc-services.ceda.ac.uk/dreq/u/[% exp.cmip6_uid %].html">[% exp.cmip6_name %]</a></td>
+                                                <td><a target="_blank" href="https://clipc-services.ceda.ac.uk/dreq/u/[% exp.cmip6_uid %].html">[% exp.cmip6_name %]</a></td>
                                             </tr>
                                             <tr>
                                                 <th id="details2">CMIP6 Experiment Description</th>
@@ -279,7 +279,7 @@
 [% INCLUDE 'um/js/js-include.html' %]
 
 <!-- datatables js includes -->
-<script src="/includes/um/js/datatables.min.js"></script>
+<script src="/styles/um/js/datatables.min.js"></script>
 
 <!-- custom js scripts -->
 <script>

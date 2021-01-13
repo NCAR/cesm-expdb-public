@@ -46,7 +46,7 @@ my $tmplFile = '/home/www/html/experiments/public/templates/showPublicExps.tmpl'
 my $template = Template->new({
     ENCODING => 'utf8',
     ABSOLUTE => 1,
-    INCLUDE_PATH => '/home/www/html/includes:/home/www/html/experiments/public/templates',
+    INCLUDE_PATH => '/home/www/html/styles:/home/www/html/experiments/public/templates',
 });
 
 # render the template

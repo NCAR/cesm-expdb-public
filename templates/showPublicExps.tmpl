@@ -117,9 +117,7 @@
                     <thead>
                         <tr>
                             <th>Casename</th>
-                            <th>Ensemble Size</th>
-                            <th>Simulation Type</th>
-                            <th>Model Version</th>
+                            <th><a href="[% exp.esgf_link %]" target="_blank">CMIP6 Experiment</a></th>
                             <th class="none">Title</th>
                             <th class="none">Data Set Availability</th>
                             <th class="none">Diagnostics Plot Sets</th>
@@ -134,9 +132,7 @@
                         [% matches = exp.esgf_link.match('source_id=([A-Za-z0-9-_]+)&experiment_id=([A-Za-z0-9-_]+)&variant_label=([A-Za-z0-9-_]+)') %]
                         <tr>
                             <td>[% exp.casename %]</td>
-                            <td>[% exp.ensemble_size %] [% matches.0 %]_[% matches.1 %]_[% matches.2 %]</td>
-                            <td>[% exp.expType_desc %]</td>
-                            <td><a href="https://github.com/ESCOMP/cesm/releases/tag/[% exp.model_version %]" target="_blank">[% exp.model_version %]</a></td>
+                            <td>[% matches.0 %]_[% matches.1 %]_[% matches.2 %]</td>
                             <td style="white-space:normal;">[% exp.title %]</td>
 
                             <!-- Dataset access -->

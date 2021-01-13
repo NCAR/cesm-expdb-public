@@ -31,23 +31,26 @@ my $dsn = $config{'dsn'};
 # initialize global item hash
 my %item = ();
 my $dbh = DBI->connect($dsn, $dbuser, $dbpasswd) or die "unable to connect to db: $DBI::errstr";
-
 my @exps = getPublicExps($dbh);
-
 my $vars = {
-    exps => \@exps
+	exps => \@exps
 };
+$dbh->disconnect;
 	
-print $req->header();
+
+
+# set the template to use
 my $tmplFile = '/home/www/html/experiments/public/templates/showPublicExps.tmpl';
 
+# set the vars for the template
 my $template = Template->new({
     ENCODING => 'utf8',
     ABSOLUTE => 1,
     INCLUDE_PATH => '/home/www/html/includes:/home/www/html/experiments/public/templates',
-			     });
+});
 
+# render the template
+$| = 1;
+print "Content-type: text/html\n\n";
 $template->process($tmplFile, $vars) || die ("Problem processing $tmplFile, ", $template->error());
-
-$dbh->disconnect;
 exit;

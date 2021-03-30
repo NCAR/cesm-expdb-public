@@ -1,0 +1,5 @@
+# ignore apple DS_Store files
+.DS_Store
+
+# ignore other apple files
+._*

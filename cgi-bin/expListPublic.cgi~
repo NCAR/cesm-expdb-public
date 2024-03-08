@@ -10,9 +10,9 @@ use HTML::Entities;
 use CGI::Carp qw(fatalsToBrowser warningsToBrowser); 
 use Template;
 use lib qw(.);
-use lib "/home/www/html/csegdb/lib";
+use lib "/var/www/html/csegdb/lib";
 use config;
-use lib "/home/www/html/exp2-public/lib";
+use lib "/var/www/html/exp2-public/lib";
 use expPublic;
 
 #------
@@ -44,7 +44,7 @@ my $tmplFile = '../templates/showPublicExps.tmpl';
 my $template = Template->new({
     ENCODING => 'utf8',
     RELATIVE => 1,
-    INCLUDE_PATH => '/home/www/html/includes:/home/www/html/exp2-public/templates',
+    INCLUDE_PATH => '/var/www/html/includes:/var/www/html/exp2-public/templates',
 			     });
 
 $template->process($tmplFile, $vars) || die ("Problem processing $tmplFile, ", $template->error());

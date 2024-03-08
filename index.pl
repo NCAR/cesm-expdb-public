@@ -10,9 +10,9 @@ use HTML::Entities;
 use CGI::Carp qw(fatalsToBrowser warningsToBrowser); 
 use Template;
 use lib qw(.);
-use lib "/home/www/html/csegdb/lib";
+use lib "/var/www/html/csegdb/lib";
 use config;
-use lib "/home/www/html/experiments/public/lib";
+use lib "/var/www/html/experiments/public/lib";
 use expPublic;
 
 #------
@@ -40,13 +40,13 @@ $dbh->disconnect;
 
 
 # set the template to use
-my $tmplFile = '/home/www/html/experiments/public/templates/showPublicExps.tmpl';
+my $tmplFile = '/var/www/html/experiments/public/templates/showPublicExps.tmpl';
 
 # set the vars for the template
 my $template = Template->new({
     ENCODING => 'utf8',
     ABSOLUTE => 1,
-    INCLUDE_PATH => '/home/www/html/styles:/home/www/html/experiments/public/templates',
+    INCLUDE_PATH => '/var/www/html/styles:/var/www/html/experiments/public/templates',
 });
 
 # render the template
